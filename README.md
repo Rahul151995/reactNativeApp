@@ -34,10 +34,10 @@ To setup the environment and create the boilerplate of react native projects.
  - react-native-typescript-transformer
  - tsllint
  - tslint-config-prettier
- - tslinit-react-recommended
+ - tslint-react-recommended
  - typescript
 
    ```
-    npm i react-native-typescript-transformer tsllint tslint-config-prettier 
+    npm i react-native-typescript-transformer tslint tslint-config-prettier 
           tslinit-react-recommended typescript
    ``` 
