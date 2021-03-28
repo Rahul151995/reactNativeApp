@@ -42,6 +42,8 @@ To setup the environment and create the boilerplate of react native projects.
    ``` 
 
 ## Add the file for the type script.
+
+  ### Add tsconfig.json
    
   ```
   tsconfig.json
@@ -67,6 +69,8 @@ To setup the environment and create the boilerplate of react native projects.
 }
   ```
 
+
+### Add tslint.json
 
   ```
 
