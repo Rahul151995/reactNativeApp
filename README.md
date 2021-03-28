@@ -41,3 +41,9 @@ To setup the environment and create the boilerplate of react native projects.
     npm i react-native-typescript-transformer tslint tslint-config-prettier 
           tslinit-react-recommended typescript
    ``` 
+
+  ## To run the react-native app in android.
+
+     ```
+     react-native run-android
+     ```

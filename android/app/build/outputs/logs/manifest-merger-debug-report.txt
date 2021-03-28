@@ -54,9 +54,9 @@ INJECTED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/
 INJECTED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 INJECTED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:2:3-22
+		ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:2:3-31
 		INJECTED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:2:3-22
+		ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:2:3-31
 		INJECTED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml
@@ -114,7 +114,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/rahu
 	android:name
 		ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:7:7-38
 		ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:7:7-38
-activity#com.myapp.MainActivity
+activity#com.reactnativeapp.MainActivity
 ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:13:7-23:18
 	android:label
 		ADDED from /Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:15:9-41

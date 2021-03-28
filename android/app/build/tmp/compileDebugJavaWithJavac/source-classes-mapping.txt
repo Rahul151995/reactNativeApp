@@ -1,14 +1,14 @@
-com/myapp/MainApplication.java
- com.myapp.MainApplication
- com.myapp.MainApplication$1
-com/myapp/MainActivity.java
- com.myapp.MainActivity
-com/myapp/BuildConfig.java
- com.myapp.BuildConfig
-com/myapp/ReactNativeFlipper.java
- com.myapp.ReactNativeFlipper
- com.myapp.ReactNativeFlipper$1
- com.myapp.ReactNativeFlipper$2
- com.myapp.ReactNativeFlipper$2$1
+com/reactnativeapp/MainActivity.java
+ com.reactnativeapp.MainActivity
+com/reactnativeapp/MainApplication.java
+ com.reactnativeapp.MainApplication
+ com.reactnativeapp.MainApplication$1
+com/reactnativeapp/ReactNativeFlipper.java
+ com.reactnativeapp.ReactNativeFlipper
+ com.reactnativeapp.ReactNativeFlipper$1
+ com.reactnativeapp.ReactNativeFlipper$2
+ com.reactnativeapp.ReactNativeFlipper$2$1
+com/reactnativeapp/BuildConfig.java
+ com.reactnativeapp.BuildConfig
 com/facebook/react/PackageList.java
  com.facebook.react.PackageList

@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.myapp",
+  "applicationId": "com.reactnativeapp",
   "variantName": "debug",
   "elements": []
 }

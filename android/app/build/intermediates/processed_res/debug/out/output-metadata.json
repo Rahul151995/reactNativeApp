@@ -4,7 +4,7 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.myapp",
+  "applicationId": "com.reactnativeapp",
   "variantName": "processDebugResources",
   "elements": [
     {

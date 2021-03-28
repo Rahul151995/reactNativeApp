@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.myapp"
+3    package="com.reactnativeapp"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -20,7 +20,7 @@
 14
 15    <application
 15-->/Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:6:5-24:19
-16        android:name="com.myapp.MainApplication"
+16        android:name="com.reactnativeapp.MainApplication"
 16-->/Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:7:7-38
 17        android:allowBackup="false"
 17-->/Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:11:7-34
@@ -42,7 +42,7 @@
 25-->/Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/debug/AndroidManifest.xml:11:19-83
 26        <activity
 26-->/Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:13:7-23:18
-27            android:name="com.myapp.MainActivity"
+27            android:name="com.reactnativeapp.MainActivity"
 27-->/Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:14:9-37
 28            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
 28-->/Users/rahul.kumar1/Documents/projects/React Native/myapp/android/app/src/main/AndroidManifest.xml:16:9-86
