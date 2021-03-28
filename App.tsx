@@ -42,7 +42,7 @@ export class App extends React.Component<Prop, State>{
     return (
       <Container containerStyle={{ alignItems: 'center' }}>
 
-       <Text  style={{fontSize:36, marginBottom:10, letterSpacing:5}}>Login</Text>
+       <Text  style={{fontSize:36, marginBottom:10, letterSpacing:5, fontFamily:'cursive'}}>Login</Text>
 
         <TextInput onSubmitEditing = {()=> this.passwordInputRef.focus()} returnKeyType={'next'}  style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
           placeholder={InputType.EMAIL} onChangeText={(val) => this.updateTextInput(val, InputType.EMAIL)} editable={true}></TextInput>
