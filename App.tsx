@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { SafeAreaView, TextInput, View, StyleSheet } from 'react-native';
+import  Container  from "./src/component/Container";
 
 interface State { 
   textInputValue:string;
@@ -23,10 +24,10 @@ updateTextInput=(e:any)=>{
 
   render() {
     return (
-      <SafeAreaView style={styles.container}>
+      <Container>
         <TextInput  style={{width:300, borderWidth:1, alignSelf:'center'}}
         placeholder={'Email'} onChangeText={this.updateTextInput} editable={true}></TextInput>
-      </SafeAreaView>
+      </Container>
     )
   }
 }
