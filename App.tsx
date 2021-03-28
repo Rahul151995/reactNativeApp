@@ -15,12 +15,14 @@ enum InputType {
 
 export class App extends React.Component<Prop, State>{
 
+  private passwordInputRef;
 
   constructor(props) {
     super(props);
     this.state = {
       emailInputValue: '',
       passwordInputValue: '',
+      
     }
   }
 
@@ -40,12 +42,12 @@ export class App extends React.Component<Prop, State>{
     return (
       <Container containerStyle={{ alignItems: 'center' }}>
 
-       <Text style={{fontSize:36, marginBottom:10, letterSpacing:5}}>Login</Text>
+       <Text  style={{fontSize:36, marginBottom:10, letterSpacing:5}}>Login</Text>
 
-        <TextInput style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
+        <TextInput onSubmitEditing = {()=> this.passwordInputRef.focus()} returnKeyType={'next'}  style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
           placeholder={InputType.EMAIL} onChangeText={(val) => this.updateTextInput(val, InputType.EMAIL)} editable={true}></TextInput>
 
-        <TextInput style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
+        <TextInput onSubmitEditing = {this.loginButtonClicked} ref={ref => this.passwordInputRef  = ref} returnKeyType={'done'} style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
           placeholder={InputType.PASSWORD} onChangeText={(val) => this.updateTextInput(val, InputType.PASSWORD)} editable={true}></TextInput>
 
         {/* <Button title={'login'} onPress={this.loginButtonClicked}></Button> */}
