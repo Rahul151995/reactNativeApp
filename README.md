@@ -45,5 +45,5 @@ To setup the environment and create the boilerplate of react native projects.
   ## To run the react-native app in android.
 
      ```
-     react-native run-android
+     react-native run-android.
      ```
