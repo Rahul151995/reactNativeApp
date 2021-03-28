@@ -142,3 +142,39 @@ To setup the environment and create the boilerplate of react native projects.
    ```
    react-native run-android
    ```
+
+## To Link assets or third party library.
+
+  ```
+    react-native.config.js
+
+    <!-- When link third party library begin -->
+       
+       module.exports = { 
+            
+            'react-native-code-push':{
+              platforms:{
+                android: null,
+                ios:null
+              }
+            }
+       }
+
+    <!-- When link third party library end -->
+
+
+     <!-- When link assets begin -->
+       
+       module.exports = {
+            assets: ['./src/assets/fonts/'],
+      };
+
+    <!-- When link assets end -->
+
+
+
+    <!-- To Link the file automatically run the below command -->
+
+     react-native link
+
+  ```
