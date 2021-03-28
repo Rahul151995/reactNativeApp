@@ -42,9 +42,9 @@ To setup the environment and create the boilerplate of react native projects.
           tslinit-react-recommended typescript
    ``` 
 
-  ## To run the react-native app in android.
+## To run the react-native app in android.
 
      ```
-     react-native run-android
+      react-native run-android
 
      ```
