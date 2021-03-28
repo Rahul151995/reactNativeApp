@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { SafeAreaView, TextInput, View, StyleSheet, Button } from 'react-native';
+import { SafeAreaView, TextInput, View, StyleSheet, Button, Text } from 'react-native';
 import Container from "./src/component/Container";
+import  CustomButton from "./src/component/CustomButton";
 
 interface State {
   emailInputValue: string;
@@ -39,13 +40,16 @@ export class App extends React.Component<Prop, State>{
     return (
       <Container containerStyle={{ alignItems: 'center' }}>
 
+       <Text style={{fontSize:36, marginBottom:10, letterSpacing:5}}>Login</Text>
+
         <TextInput style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
           placeholder={InputType.EMAIL} onChangeText={(val) => this.updateTextInput(val, InputType.EMAIL)} editable={true}></TextInput>
 
         <TextInput style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
           placeholder={InputType.PASSWORD} onChangeText={(val) => this.updateTextInput(val, InputType.PASSWORD)} editable={true}></TextInput>
 
-        <Button title={'login'} onPress={this.loginButtonClicked}></Button>
+        {/* <Button title={'login'} onPress={this.loginButtonClicked}></Button> */}
+        <CustomButton onPress={this.loginButtonClicked} title={'Login'}/>
 
       </Container>
     )
