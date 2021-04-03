@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { SafeAreaView, TextInput, View, StyleSheet, Button, Text } from 'react-native';
 import Container from "./src/component/Container";
-import  CustomButton from "./src/component/CustomButton";
-
+import CustomButton from "./src/component/CustomButton";
+import { Formik } from "formik";
+import { Validators } from "./src/utils/validators";
 interface State {
-  emailInputValue: string;
-  passwordInputValue: string;
+  form: {
+    emailInputValue: string;
+    passwordInputValue: string;
+  }
 }
 interface Prop { }
 enum InputType {
@@ -20,38 +23,88 @@ export class App extends React.Component<Prop, State>{
   constructor(props) {
     super(props);
     this.state = {
-      emailInputValue: '',
-      passwordInputValue: '',
-      
+      form: {
+        emailInputValue: '',
+        passwordInputValue: ''
+      }
+
     }
   }
 
   updateTextInput = (val: any, type: any) => {
     if (type == InputType.EMAIL)
-      this.setState({ emailInputValue: val });
+      this.setState({ form: { ...this.state.form, emailInputValue: val } });
     else if (type == InputType.PASSWORD)
-      this.setState({ passwordInputValue: val });
+      this.setState({ form: { ...this.state.form, passwordInputValue: val } });
   }
 
-  loginButtonClicked=()=>{
-    console.log(this.state.emailInputValue)
-    console.log(this.state.passwordInputValue)
-  }
+  // loginButtonClicked = () => {
+  //   console.log(this.state.emailInputValue)
+  //   console.log(this.state.passwordInputValue)
+  // }
 
   render() {
     return (
       <Container containerStyle={{ alignItems: 'center' }}>
 
-       <Text  style={{fontSize:36, marginBottom:10, letterSpacing:5, fontFamily:'cursive'}}>Login</Text>
+        <Text style={{ fontSize: 36, marginBottom: 10, letterSpacing: 5, fontFamily: 'cursive' }}>Login</Text>
 
-        <TextInput onSubmitEditing = {()=> this.passwordInputRef.focus()} returnKeyType={'next'}  style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
-          placeholder={InputType.EMAIL} onChangeText={(val) => this.updateTextInput(val, InputType.EMAIL)} editable={true}></TextInput>
+        <Formik
+          initialValues={this.state.form}
+          validateOnMount={true}
+          validateOnChange={true}
+          validationSchema={Validators.loginValidator}
+          onSubmit={() => { console.log("On Submit is called");
+           }}>
+          {(props) => {
+            return (
+              <View style={{alignItems:'center'}}>
+                <TextInput
+                  onSubmitEditing={() => this.passwordInputRef.focus()}
+                  returnKeyType={'next'}
+                  style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
+                  placeholder={InputType.EMAIL}
+                  onChangeText={props.handleChange('emailInputValue')}
+                  editable={true}
+                  value={props.values.emailInputValue}
+                >
+                </TextInput>
 
-        <TextInput onSubmitEditing = {this.loginButtonClicked} ref={ref => this.passwordInputRef  = ref} returnKeyType={'done'} style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
-          placeholder={InputType.PASSWORD} onChangeText={(val) => this.updateTextInput(val, InputType.PASSWORD)} editable={true}></TextInput>
+                <TextInput
+                  onSubmitEditing={()=>{
+                    if(props.isValid){
+                        console.log("is valid");
+                      }
+                    else{
+                      console.log("form is not valid");                     
+                    }
+                  }}
+                  ref={ref => this.passwordInputRef = ref}
+                  returnKeyType={'done'}
+                  style={{ width: 300, borderWidth: 1, marginBottom: 10 }}
+                  placeholder={InputType.PASSWORD}
+                  onChangeText={props.handleChange('passwordInputValue')}
+                  editable={true}
+                  value={props.values.passwordInputValue}
+                >
+                </TextInput>
 
-        {/* <Button title={'login'} onPress={this.loginButtonClicked}></Button> */}
-        <CustomButton onPress={this.loginButtonClicked} title={'Login'}/>
+                {/* <Button title={'login'} onPress={this.loginButtonClicked}></Button> */}
+                <CustomButton
+                  onPress={()=>{
+                    if(props.isValid){
+                      console.log("is valid");
+                      props.handleSubmit;
+                    }
+                  else{
+                    console.log("form is not valid", props.errors);                     
+                  }
+                  }}
+                  title={'Login'} />
+              </View>
+            )
+          }}
+        </Formik>
 
       </Container>
     )
