@@ -1,32 +1,41 @@
 import * as React from 'react';
-import { StyleSheet,TouchableOpacity, Text, ViewStyle, TextStyle } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, ViewStyle, TextStyle } from "react-native";
+import { PrimaryTheme } from '../styles/Theme';
 
 interface Props {
-    title:string;
-    disabled?:boolean;
+    title: string;
+    disabled?: boolean;
     bottonStyle?: ViewStyle | ViewStyle[];
     textStyle?: TextStyle | TextStyle[];
-    onPress:any;
+    onPress: any;
 }
 
 const CustomButton = (props: Props) => {
-return(
-<TouchableOpacity onPress={props.onPress} disabled={props.disabled} style={[styles.buttonStyle, props.bottonStyle]}>
-    <Text style={[styles.textStyle, props.textStyle]}>{props.title}</Text>
-</TouchableOpacity>
-)
+    return (
+        <TouchableOpacity
+            onPress={props.onPress}
+            disabled={props.disabled}
+            style={[
+                props.disabled ? {...styles.buttonStyle, backgroundColor:PrimaryTheme.$DIVIDER_COLOR} :
+                styles.buttonStyle, props.bottonStyle]}>
+            <Text
+                style={[styles.textStyle, props.textStyle]}>
+                {props.title}
+            </Text>
+        </TouchableOpacity>
+    )
 }
 const styles = StyleSheet.create({
     buttonStyle: {
-        backgroundColor:'blue',
-        borderRadius:5,
-        width:100,
-        height:30
+        backgroundColor: 'blue',
+        borderRadius: 5,
+        width: 100,
+        height: 30
     },
-    textStyle:{
-        color:'white',
-        textAlign:'center',
-        padding:5
+    textStyle: {
+        color: 'white',
+        textAlign: 'center',
+        padding: 5
     }
 });
 

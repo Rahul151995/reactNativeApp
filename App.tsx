@@ -66,9 +66,16 @@ export class App extends React.Component<Prop, State>{
                   placeholder={InputType.EMAIL}
                   onChangeText={props.handleChange('emailInputValue')}
                   editable={true}
+                  onBlur={()=>props.setFieldTouched('emailInputValue')}
                   value={props.values.emailInputValue}
                 >
                 </TextInput>
+
+                {props.dirty && props.touched.emailInputValue ? 
+                  (<Text style={{color:'red'}}>{props.errors.emailInputValue}</Text>)
+                  : null }
+
+                
 
                 <TextInput
                   onSubmitEditing={()=>{
@@ -86,11 +93,19 @@ export class App extends React.Component<Prop, State>{
                   onChangeText={props.handleChange('passwordInputValue')}
                   editable={true}
                   value={props.values.passwordInputValue}
+                  onBlur={()=>props.setFieldTouched('passwordInputValue')}
                 >
                 </TextInput>
 
+                  {props.dirty && props.touched.passwordInputValue ? 
+                  (<Text style={{color:'red'}}>{props.errors.passwordInputValue}</Text>)
+                  : null }
+
+                
+
                 {/* <Button title={'login'} onPress={this.loginButtonClicked}></Button> */}
                 <CustomButton
+                disabled={!props.isValid}
                   onPress={()=>{
                     if(props.isValid){
                       console.log("is valid");
