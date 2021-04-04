@@ -178,3 +178,11 @@ To setup the environment and create the boilerplate of react native projects.
      react-native link
 
   ```
+
+
+
+  ## To make responsive UI in react-native
+
+    ```
+    npm i react-native-responsive-screen
+    ```
